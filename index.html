@@ -206,6 +206,8 @@ const Q = [
   {id:'provincia', type:'place', t:'¿Dónde vivís?', o:[...PROV, FUERA]},
   {id:'modalidad', type:'choice', t:'¿Cómo preferís la consulta?', o:['Online (videollamada)','Presencial en Posadas, Misiones','Me da igual']},
   {id:'objetivo', type:'choice', t:'¿Qué estás buscando hoy?', o:['Contratar una abogada para avanzar con mi caso','Estoy comparando opciones','Una orientación inicial']},
+  {id:'fuente', type:'choice', t:'¿Cómo me conociste?', o:['Por un reel o publicación de Instagram','Me recomendó un conocido o cliente','Por Google','Por otra red social','Otro']},
+  {id:'fuente_otro', type:'text', t:'¿Cómo me conociste?', d:'Contámelo en pocas palabras.', ph:'Ej: por una charla', show:a=>a.fuente==='Otro'},
   {id:'nombre', type:'text', t:'¿Cómo te llamás?', ph:'Nombre y apellido', ac:'name'},
   {id:'whatsapp', type:'tel', t:'{nombre}, ¿a qué WhatsApp te puedo escribir?', ph:'Ej: 376 412 3456', ac:'tel'},
   {id:'email', type:'email', t:'¿Y tu email?', d:'Opcional.', ph:'nombre@email.com', ac:'email', req:false}
@@ -331,6 +333,8 @@ async function send() {
     data[q.id] = Array.isArray(v) ? v.join(', ') : (v || '');
     if (q.type === 'place') data.localidad = A.localidad || '';
   });
+  if (data.fuente_otro) data.fuente = 'Otro: ' + data.fuente_otro;
+  delete data.fuente_otro;
   data.origen = location.href;
   next.disabled = true; next.textContent = 'Enviando…';
   try {
