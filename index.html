@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Victoria Molina · Abogada de Familia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c1226;--card:#111933;--tx:#eef1f8;--mut:#9aa3bb;--ac:#8fa7f0;--btn:#3d5ccc;--bd:#232c48;--sel:rgba(143,167,240,.10);--line:rgba(143,167,240,.07);--btn-tx:#fff;
+--serif:'Libre Baskerville',Georgia,serif;--caps:'Cinzel',Georgia,serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f7f8fb;--card:#fff;--tx:#141a2e;--mut:#535b72;--ac:#2f4fb5;--btn:#2f4fb5;--bd:#e2e5ee;--sel:rgba(47,79,181,.06);--line:rgba(20,26,46,.05)}}
+:root[data-theme="dark"]{--bg:#0c1226;--card:#111933;--tx:#eef1f8;--mut:#9aa3bb;--ac:#8fa7f0;--btn:#3d5ccc;--bd:#232c48;--sel:rgba(143,167,240,.10);--line:rgba(143,167,240,.07)}
+html{scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Figtree,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6}
+.w{max-width:860px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+header{position:relative;isolation:isolate}
+header:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:linear-gradient(#000 60%,transparent);mask-image:linear-gradient(#000 60%,transparent)}
+.brand{display:flex;flex-direction:column;align-items:center;gap:2px;padding:28px 0 8px}
+.brand b{font-family:var(--caps);font-weight:600;font-size:20px;letter-spacing:.14em}
+.brand span{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--mut)}
+h1{font-family:var(--serif);font-size:clamp(30px,6vw,50px);line-height:1.15;margin:0 0 18px;font-weight:400;letter-spacing:-.01em}
+h2{font-family:var(--serif);font-size:clamp(24px,4.5vw,34px);line-height:1.2;margin:0 0 10px;font-weight:400}
+em{font-style:italic;color:var(--ac)}
+.sub{color:var(--mut);max-width:600px;margin:0 auto 28px}
+.tag{display:inline-flex;align-items:center;gap:10px;font-family:var(--caps);font-size:13px;letter-spacing:.18em;color:var(--ac);margin-bottom:14px;font-weight:600}
+.tag:before,.tag:after{content:"";width:22px;height:1px;background:currentColor;opacity:.6}
+.c{text-align:center}
+.vid{aspect-ratio:16/9;background:var(--card);border:1px solid var(--bd);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--mut);padding:16px;text-align:center}
+.vid iframe{width:100%;height:100%;border:0;border-radius:12px}
+.play{width:60px;height:60px;border-radius:50%;background:var(--btn);display:flex;align-items:center;justify-content:center}
+.play:after{content:"";border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
+.steps{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:8px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:22px}
+.card b.n{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--ac);font-size:24px}
+.ph{color:var(--ac);font-weight:700;font-size:13px}
+.about{display:flex;flex-direction:column;align-items:center;gap:32px;text-align:center}
+.about p{max-width:560px;margin-left:auto!important;margin-right:auto!important}
+.foto{width:100%;max-width:360px;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;border-radius:12px;border:1px solid var(--bd);display:block}
+.edu{list-style:none;padding:0;margin:0 auto;max-width:560px;border-top:1px solid var(--bd)}
+.edu li{padding:14px 0;border-bottom:1px solid var(--bd);display:flex;flex-direction:column;gap:2px}
+.edu b{font-family:var(--serif);font-weight:400;font-size:16px;line-height:1.4}
+.edu span{color:var(--mut);font-size:13px}
+.certs{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;justify-content:center}
+.cert{padding:5px;background:var(--card);border:1px solid var(--bd);border-radius:8px;cursor:zoom-in;width:132px;opacity:.85;transition:opacity .2s,border-color .2s}
+.cert:hover{opacity:1;border-color:var(--ac)}
+.cert img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:4px}
+.lb{border:0;padding:0;background:transparent;max-width:min(92vw,1000px);max-height:92vh;overflow:visible}
+.lb::backdrop{background:rgba(5,8,20,.82)}
+.lb img{display:block;max-width:100%;max-height:88vh;border-radius:6px}
+.lb-x{position:absolute;top:-44px;right:0;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:16px;cursor:pointer}
+@media (max-width:720px){.about{gap:26px}.foto{max-width:300px}}
+.tp-wrap{display:flex;justify-content:center;padding:0 20px 24px}
+.tp{display:inline-flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px 16px;padding:12px 22px;border:1px solid var(--bd);border-radius:999px;background:var(--card);text-decoration:none;color:var(--tx);transition:border-color .2s}
+.tp:hover{border-color:var(--ac)}
+.tp-stars{display:flex;gap:2px}
+.tp-stars i{display:flex}
+.tp-stars svg{width:22px;height:22px;fill:var(--bd)}
+.tp-stars i.on svg{fill:#fbbc04}
+.tp-score{font-weight:600}
+.tp-sep{width:1px;height:22px;background:var(--bd)}
+.tp-link{color:var(--ac);font-weight:500}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:28px 20px}
+
+/* Formulario paso a paso */
+.qf{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:28px 22px 24px;min-height:400px;text-align:left;position:relative;overflow:hidden}
+.bar{position:absolute;left:0;top:0;right:0;height:3px;background:var(--bd)}
+.bar i{display:block;height:100%;width:0;background:var(--ac);transition:width .4s ease}
+.q{display:none}
+.q.on{display:block;animation:qin .35s ease}
+@keyframes qin{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.qt{font-family:var(--serif);font-size:clamp(19px,3.6vw,24px);line-height:1.35;margin:10px 0 6px;font-weight:400}
+.qd{color:var(--mut);margin:0 0 14px;font-size:15px}
+.opts{display:grid;gap:10px;margin-top:16px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;font:inherit;font-size:16px;color:var(--tx);background:transparent;border:1px solid var(--bd);border-radius:12px;padding:13px 14px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--ac)}
+.opt.sel{border-color:var(--ac);background:var(--sel)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:7px;border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--ac)}
+.opt.sel .k{background:var(--btn);color:#fff;border-color:transparent}
+.fi{width:100%;margin-top:14px;font:inherit;font-size:20px;color:var(--tx);background:transparent;border:0;border-bottom:2px solid var(--bd);padding:10px 2px;outline:none;border-radius:0;resize:vertical}
+.fi:focus{border-bottom-color:var(--ac)}
+select.fi{font-size:18px;cursor:pointer}
+select.fi option{background:var(--card);color:var(--tx)}
+.nav{display:flex;align-items:center;gap:12px;margin-top:24px;flex-wrap:wrap}
+.btn{font:inherit;font-weight:600;font-size:16px;color:var(--btn-tx);background:var(--btn);border:0;border-radius:10px;padding:11px 22px;cursor:pointer}
+.btn:disabled{opacity:.6;cursor:wait}
+.back{font:inherit;font-size:15px;color:var(--mut);background:transparent;border:1px solid var(--bd);border-radius:10px;padding:10px 14px;cursor:pointer}
+.hint{color:var(--mut);font-size:13px}
+.err{color:#f87171;font-size:14px;min-height:20px;margin:10px 0 0}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.end{text-align:center;padding:48px 8px;animation:qin .35s ease}
+.end .ok{width:64px;height:64px;margin:0 auto 16px;border-radius:50%;background:var(--btn);display:flex;align-items:center;justify-content:center;color:#fff;font-size:30px;font-weight:700}
+.priv{color:var(--mut);font-size:13px;margin-top:14px}
+@media (prefers-reduced-motion:reduce){.q.on,.end{animation:none}.bar i{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="c"><div class="w">
+  <div class="brand"><b>VICTORIA MOLINA</b><span>Abogada</span></div>
+  <div style="height:40px"></div>
+  <div class="tag">Abogada de Familia</div>
+  <h1>Tu situación familiar, <em>en buenas manos</em></h1>
+  <p class="sub">Soy Victoria. Te acompaño en divorcios, cuota alimentaria, cuidado de los hijos y sucesiones, y también puedo orientarte en otros temas legales. Atiendo de forma presencial en Posadas, Misiones, y online en toda Argentina. Mirá el video y contame tu caso.</p>
+
+  <!-- VIDEO PRINCIPAL: reemplazar este bloque por el iframe de YouTube (Compartir → Insertar) -->
+  <div class="vid"><div class="play"></div><b>VIDEO DE VICTORIA</b><span>Quién es, en qué te ayuda y qué pasa después de completar el formulario (1-2 min)</span><span class="ph">REEMPLAZAR</span></div>
+</div></header>
+
+<section><div class="w c">
+  <div class="tag">Cómo funciona</div>
+  <h2>Tres pasos, <em>sin compromiso</em></h2>
+  <div class="steps" style="text-align:left">
+    <div class="card"><b class="n">1</b><br><b>Completás el formulario</b><br><span style="color:var(--mut)">Son pocas preguntas y te lleva 2 minutos.</span></div>
+    <div class="card"><b class="n">2</b><br><b>Reviso tu caso</b><br><span style="color:var(--mut)">Leo tus respuestas personalmente.</span></div>
+    <div class="card"><b class="n">3</b><br><b>Me comunico con vos</b><br><span style="color:var(--mut)">Te escribo para coordinar una primera consulta, online o presencial.</span></div>
+  </div>
+</div></section>
+
+<section id="formulario"><div class="w c">
+  <div class="tag">Contame tu caso</div>
+  <h2>Respondé las <em>preguntas</em></h2>
+  <p class="sub">Tus datos son confidenciales y solo los veo yo.</p>
+
+  <div class="qf">
+    <div class="bar"><i id="bar"></i></div>
+    <form id="qform" novalidate>
+      <input type="text" name="web" id="hp" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div id="qs"></div>
+      <div class="nav">
+        <button type="button" class="back" id="back">← Atrás</button>
+        <button type="submit" class="btn" id="next">OK ✓</button>
+        <span class="hint" id="hint">o presioná <b>Enter ↵</b></span>
+      </div>
+      <p class="err" id="err" role="alert"></p>
+    </form>
+    <div class="end" id="end" hidden>
+      <div class="ok">✓</div>
+      <h3 class="qt" id="endT"></h3>
+      <p class="qd" id="endP"></p>
+    </div>
+  </div>
+  <p class="priv">🔒 Tus respuestas se usan solo para responder tu consulta.</p>
+</div></section>
+
+<section><div class="w">
+  <div class="about">
+    <img class="foto" src="img/victoria.jpg" alt="Victoria Molina en su estudio" width="1100" height="1650" loading="lazy">
+    <div>
+      <div class="tag">Sobre mí</div>
+      <h2>Victoria <em>Molina</em></h2>
+      <p style="color:var(--mut);margin:0 0 22px">Soy abogada de familia. Acompaño cada caso de forma personal, explicando cada paso con claridad para que sepas qué esperar. Atiendo de forma presencial en Posadas, Misiones, y online en toda Argentina.</p>
+      <ul class="edu">
+        <li><b>Diplomatura Universitaria en Derechos de la Niñez y Adolescencia</b><span>Universidad Nacional de Córdoba · 2024</span></li>
+        <li><b>Diplomatura Superior Universitaria en Género, Igualdad y Derecho</b><span>Universidad Nacional del Sur · 2024</span></li>
+      </ul>
+      <div class="certs">
+        <button type="button" class="cert" data-src="img/certificado-unc.jpg" aria-label="Ver certificado de la Universidad Nacional de Córdoba"><img src="img/certificado-unc.jpg" alt="" loading="lazy"></button>
+        <button type="button" class="cert" data-src="img/certificado-uns.jpg" aria-label="Ver certificado de la Universidad Nacional del Sur"><img src="img/certificado-uns.jpg" alt="" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<dialog class="lb" id="lb">
+  <button type="button" class="lb-x" id="lbx" aria-label="Cerrar">✕</button>
+  <img id="lbimg" alt="Certificado">
+</dialog>
+
+<div class="tp-wrap">
+  <a class="tp" id="tp" href="#" target="_blank" rel="noopener">
+    <span class="tp-stars" id="tpStars" aria-hidden="true"></span>
+    <span class="tp-score" id="tpScore">¿Ya te atendí? Calificá mi atención</span>
+    <span class="tp-sep" aria-hidden="true"></span>
+    <span class="tp-link" id="tpLink">Dejar reseña en Google ↗</span>
+  </a>
+</div>
+
+<footer>© Victoria Molina · Abogada de Familia</footer>
+
+<script>
+// URL del Google Apps Script de Victoria (se completa en el paso de la planilla)
+const ENDPOINT = 'https://script.google.com/macros/s/AKfycbyTymtjPIRiGt8CrVF_pUBur0xZJBlbf7jX7AQnb6cY_ew7CdCOfEorwUx8z5ynT_-A/exec';
+
+const PROV = ['Buenos Aires','CABA','Catamarca','Chaco','Chubut','Córdoba','Corrientes','Entre Ríos','Formosa','Jujuy','La Pampa','La Rioja','Mendoza','Misiones','Neuquén','Río Negro','Salta','San Juan','San Luis','Santa Cruz','Santa Fe','Santiago del Estero','Tierra del Fuego','Tucumán'];
+const FUERA = 'Vivo fuera de Argentina';
+const OTRO = 'Otro tema (no de familia)';
+const NADIE = 'No hay otra parte (ej: una sucesión de común acuerdo)';
+
+// Preguntas: type = choice | multi | select | place | text | long | tel | email.
+// "show" decide si aparece según respuestas previas. "ex" = opciones de multi que excluyen a las demás.
+const Q = [
+  {id:'tema', type:'choice', t:'¿En qué tema necesitás ayuda?', o:['Divorcio o separación','Cuota alimentaria','Cuidado de los hijos y régimen de comunicación','Sucesión o herencia','Violencia familiar',OTRO]},
+  {id:'tema_otro', type:'text', t:'¿Qué tema es?', d:'Contámelo en pocas palabras.', ph:'Ej: un contrato de alquiler', show:a=>a.tema===OTRO},
+  {id:'situacion', type:'long', t:'¿Qué pasó y qué querés lograr?', d:'Contame desde cuándo pasa y cuál fue el último hecho. Shift + Enter para un salto de línea.', ph:'Escribí acá…'},
+  {id:'vinculo', type:'choice', t:'¿Con quién es el conflicto?', o:['Mi ex pareja o cónyuge','El padre o la madre de mis hijos','Otro familiar','Otra persona o una empresa',NADIE]},
+  {id:'otra_parte', type:'text', t:'¿Cómo se llama la otra parte?', d:'Opcional. Lo uso solo para confirmar que no haya un conflicto de intereses.', ph:'Nombre y apellido', req:false, show:a=>a.vinculo && a.vinculo!==NADIE},
+  {id:'hijos', type:'choice', t:'¿Hay hijos menores de edad involucrados?', o:['Sí','No'], show:a=>a.tema!==OTRO},
+  {id:'proceso', type:'multi', t:'¿Hay algo ya iniciado?', d:'Podés elegir más de una opción.', o:['No, todavía no hay nada iniciado','Hay un juicio o expediente','Hice o me hicieron una denuncia','Hubo una mediación o Ce.Ju.Me.','Recibí una cédula o notificación','No sé'], ex:['No, todavía no hay nada iniciado','No sé']},
+  {id:'abogado', type:'choice', t:'¿Tuviste o tenés otro abogado por este tema?', o:['No','Sí, pero ya no trabajo con él o ella','Sí, y todavía me representa']},
+  {id:'urgencia', type:'choice', t:'¿Qué tan urgente es tu caso?', o:['Muy urgente, necesito ayuda esta semana','En las próximas semanas','Solo quiero informarme por ahora']},
+  {id:'provincia', type:'place', t:'¿Dónde vivís?', o:[...PROV, FUERA]},
+  {id:'modalidad', type:'choice', t:'¿Cómo preferís la consulta?', o:['Online (videollamada)','Presencial en Posadas, Misiones','Me da igual']},
+  {id:'objetivo', type:'choice', t:'¿Qué estás buscando hoy?', o:['Contratar una abogada para avanzar con mi caso','Estoy comparando opciones','Una orientación inicial']},
+  {id:'nombre', type:'text', t:'¿Cómo te llamás?', ph:'Nombre y apellido', ac:'name'},
+  {id:'whatsapp', type:'tel', t:'{nombre}, ¿a qué WhatsApp te puedo escribir?', ph:'Ej: 376 412 3456', ac:'tel'},
+  {id:'email', type:'email', t:'¿Y tu email?', d:'Opcional.', ph:'nombre@email.com', ac:'email', req:false}
+];
+
+const $ = id => document.getElementById(id);
+const form = $('qform'), qs = $('qs'), bar = $('bar'), back = $('back'), next = $('next'), hint = $('hint'), err = $('err');
+const A = {}, hist = [], KEYS = 'ABCDEFGHIJ';
+let cur = 0, started = false, busy = false;
+
+Q.forEach((q, i) => {
+  const el = document.createElement('div');
+  el.className = 'q';
+  const h = document.createElement('h3'); h.className = 'qt'; el.append(h);
+  if (q.d) { const p = document.createElement('p'); p.className = 'qd'; p.textContent = q.d; el.append(p); }
+  if (q.type === 'choice' || q.type === 'multi') {
+    const box = document.createElement('div'); box.className = 'opts';
+    q.o.forEach((o, j) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'opt';
+      b.innerHTML = '<span class="k">' + KEYS[j] + '</span>';
+      b.append(o);
+      b.onclick = () => pick(q, o);
+      box.append(b);
+    });
+    el.append(box);
+  } else if (q.type === 'select' || q.type === 'place') {
+    const s = document.createElement('select'); s.className = 'fi';
+    s.innerHTML = '<option value="" disabled selected>' + (q.type === 'place' ? 'Provincia' : 'Elegí una opción') + '</option>';
+    q.o.forEach(o => s.add(new Option(o, o)));
+    el.append(s);
+    if (q.type === 'place') {
+      const loc = document.createElement('input');
+      loc.className = 'fi'; loc.type = 'text'; loc.placeholder = 'Localidad'; loc.autocomplete = 'address-level2';
+      loc.oninput = () => { A.localidad = loc.value.trim(); err.textContent = ''; };
+      el.append(loc);
+      s.onchange = () => {
+        A[q.id] = s.value; err.textContent = '';
+        loc.style.display = s.value === FUERA ? 'none' : '';
+        if (s.value === FUERA) setTimeout(go, 250); else loc.focus();
+      };
+    } else s.onchange = () => { A[q.id] = s.value; setTimeout(go, 250); };
+  } else {
+    const f = document.createElement(q.type === 'long' ? 'textarea' : 'input');
+    f.className = 'fi'; f.placeholder = q.ph || '';
+    if (q.type === 'long') f.rows = 3; else f.type = q.type;
+    if (q.ac) f.autocomplete = q.ac;
+    f.oninput = () => { A[q.id] = f.value.trim(); err.textContent = ''; };
+    if (q.type === 'long') f.onkeydown = e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); go(); } };
+    el.append(f);
+  }
+  q.el = el;
+  qs.append(el);
+});
+
+const visible = i => !Q[i].show || Q[i].show(A);
+const nextIndex = i => { for (let j = i + 1; j < Q.length; j++) if (visible(j)) return j; return -1; };
+
+function show(i) {
+  Q[cur].el.classList.remove('on');
+  const q = Q[i];
+  cur = i;
+  const nombre = (A.nombre || '').split(' ')[0];
+  q.el.querySelector('.qt').textContent = q.t.replace('{nombre}', nombre || 'Perfecto');
+  q.el.classList.add('on');
+  err.textContent = '';
+  back.style.visibility = hist.length ? 'visible' : 'hidden';
+  const last = nextIndex(i) < 0;
+  next.textContent = last ? 'Enviar' : 'OK ✓';
+  hint.style.display = /choice|multi|select/.test(q.type) ? 'none' : '';
+  bar.style.width = (i / Q.length * 100) + '%';
+  if (started) { const f = q.el.querySelector('.fi'); if (f) f.focus({preventScroll:true}); }
+}
+
+function mark(q) {
+  const v = A[q.id];
+  q.el.querySelectorAll('.opt').forEach(b => {
+    const t = b.lastChild.textContent;
+    b.classList.toggle('sel', Array.isArray(v) ? v.includes(t) : v === t);
+  });
+}
+
+function pick(q, o) {
+  if (busy) return;
+  if (q.type === 'multi') {
+    let v = A[q.id] || [];
+    if (q.ex.includes(o)) v = v.includes(o) ? [] : [o];
+    else { v = v.filter(x => !q.ex.includes(x)); v = v.includes(o) ? v.filter(x => x !== o) : [...v, o]; }
+    A[q.id] = v; err.textContent = '';
+    return mark(q);
+  }
+  A[q.id] = o;
+  mark(q);
+  busy = true;
+  setTimeout(() => { busy = false; go(); }, 280);
+}
+
+function invalid(q) {
+  const v = A[q.id];
+  if (q.type === 'place') return !v ? 'Elegí tu provincia.' : (v !== FUERA && !A.localidad ? 'Completá tu localidad.' : '');
+  if (!v || !v.length) return q.req === false ? '' : (/choice|multi|select/.test(q.type) ? 'Elegí una opción para seguir.' : 'Completá este campo para seguir.');
+  if (q.type === 'tel' && v.replace(/\D/g, '').length < 8) return 'Revisá el número, parece incompleto.';
+  if (q.type === 'email' && !/^\S+@\S+\.\S+$/.test(v)) return 'Revisá el email, parece incompleto.';
+  return '';
+}
+
+function go() {
+  const q = Q[cur], e = invalid(q);
+  if (e) { err.textContent = e; return; }
+  started = true;
+  if (q.id === 'provincia' && A.provincia === FUERA) return end('Gracias por tu interés', 'Por ahora atiendo consultas solo dentro de Argentina, así que no voy a poder tomar tu caso.');
+  const n = nextIndex(cur);
+  if (n < 0) return send();
+  hist.push(cur);
+  show(n);
+}
+
+async function send() {
+  const data = {fecha: new Date().toLocaleString('es-AR')};
+  Q.forEach((q, i) => {
+    if (!visible(i)) return;
+    const v = A[q.id];
+    data[q.id] = Array.isArray(v) ? v.join(', ') : (v || '');
+    if (q.type === 'place') data.localidad = A.localidad || '';
+  });
+  data.origen = location.href;
+  next.disabled = true; next.textContent = 'Enviando…';
+  try {
+    if (!$('hp').value) {
+      if (ENDPOINT) await fetch(ENDPOINT, {method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify(data)});
+      else console.log('Formulario sin conectar todavía. Respuestas:', data);
+    }
+  } catch (_) {
+    err.textContent = 'No se pudo enviar. Revisá tu conexión y probá de nuevo.';
+    next.disabled = false; next.textContent = 'Enviar';
+    return;
+  }
+  end('¡Listo!', 'Muchas gracias por completar el formulario, me voy a comunicar con vos a la brevedad.');
+}
+
+function end(t, p) {
+  form.hidden = true;
+  bar.style.width = '100%';
+  $('endT').textContent = t; $('endP').textContent = p;
+  $('end').hidden = false;
+}
+
+form.onsubmit = e => { e.preventDefault(); go(); };
+back.onclick = () => { if (hist.length) { started = true; show(hist.pop()); } };
+document.addEventListener('keydown', e => {
+  const q = Q[cur];
+  if (form.hidden || !/choice|multi/.test(q.type) || e.metaKey || e.ctrlKey || e.altKey || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+  const j = KEYS.indexOf(e.key.toUpperCase());
+  if (j > -1 && j < q.o.length && e.key.length === 1) pick(q, q.o[j]);
+});
+
+show(0);
+
+// Reseñas de Google: link para dejar reseña. La nota y la cantidad llegan solas desde el Apps Script (se actualizan 1 vez por día).
+const RESENAS_URL = 'https://g.page/r/CQwFSjaV0MdwECE/review';
+const STAR = '<svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.7l7.1-.6z"/></svg>';
+function pintarResenas(nota, cantidad) {
+  $('tpStars').innerHTML = [0,1,2,3,4].map(i => '<i class="' + (nota && i < Math.round(nota) ? 'on' : '') + '">' + STAR + '</i>').join('');
+  if (!nota) return;
+  $('tpScore').textContent = nota.toFixed(1).replace('.', ',') + ' · ' + cantidad + (cantidad === 1 ? ' reseña' : ' reseñas');
+  $('tpLink').textContent = 'Ver en Google ↗';
+}
+pintarResenas(null);
+$('tp').href = RESENAS_URL;
+if (ENDPOINT) fetch(ENDPOINT + '?r=resenas').then(r => r.json()).then(d => { if (d.nota && d.cantidad) pintarResenas(d.nota, d.cantidad); }).catch(() => {});
+
+// Certificados: se abren en grande al tocarlos
+const lb = $('lb');
+document.querySelectorAll('.cert').forEach(b => b.onclick = () => { $('lbimg').src = b.dataset.src; lb.showModal(); });
+$('lbx').onclick = () => lb.close();
+lb.onclick = e => { if (e.target === lb) lb.close(); };
+</script>
+</body>
+</html>
