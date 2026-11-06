@@ -6,7 +6,8 @@
 <title>Victoria Molina, abogada de familia en Posadas</title>
 <meta name="description" content="Abogada de familia en Posadas, Misiones, y online en toda Argentina. Divorcios, cuota alimentaria, cuidado de los hijos y sucesiones. Contame tu caso.">
 <link rel="canonical" href="https://abogadavictoriamolina.com/">
-<meta name="theme-color" content="#0c1226">
+<meta name="theme-color" content="#e7edfd">
+<meta name="color-scheme" content="light only">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <meta property="og:type" content="website">
@@ -23,16 +24,14 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0c1226;--card:#111933;--tx:#eef1f8;--mut:#9aa3bb;--ac:#8fa7f0;--btn:#3d5ccc;--bd:#232c48;--sel:rgba(143,167,240,.10);--line:rgba(143,167,240,.07);--btn-tx:#fff;
---serif:'Libre Baskerville',Georgia,serif;--caps:'Cinzel',Georgia,serif;
+:root{color-scheme:light;--bg:#f9f9fe;--card:#fff;--tx:#1d2342;--mut:#5c6382;--ac:#4a63d8;--vi:#7b68d9;--btn:#4a63d8;--bd:#e5e3f3;--sel:rgba(123,104,217,.09);--line:rgba(123,104,217,.08);--btn-tx:#fff;
+--serif:'Bodoni Moda',Didot,Georgia,serif;--caps:'Bodoni Moda',Didot,Georgia,serif;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f7f8fb;--card:#fff;--tx:#141a2e;--mut:#535b72;--ac:#2f4fb5;--btn:#2f4fb5;--bd:#e2e5ee;--sel:rgba(47,79,181,.06);--line:rgba(20,26,46,.05)}}
-:root[data-theme="dark"]{--bg:#0c1226;--card:#111933;--tx:#eef1f8;--mut:#9aa3bb;--ac:#8fa7f0;--btn:#3d5ccc;--bd:#232c48;--sel:rgba(143,167,240,.10);--line:rgba(143,167,240,.07)}
 html{scroll-behavior:smooth}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);font-family:Figtree,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Hanken Grotesk",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6}
 .w{max-width:860px;margin:0 auto;padding:0 20px}
 section{padding:56px 0}
 header{position:relative;isolation:isolate;padding-bottom:28px}
@@ -108,7 +107,7 @@ select.fi option{background:var(--card);color:var(--tx)}
 .btn:disabled{opacity:.6;cursor:wait}
 .back{font:inherit;font-size:15px;color:var(--mut);background:transparent;border:1px solid var(--bd);border-radius:4px;padding:11px 16px;cursor:pointer}
 .hint{color:var(--mut);font-size:13px}
-.err{color:#f87171;font-size:14px;min-height:20px;margin:10px 0 0}
+.err{color:#c62828;font-size:14px;min-height:20px;margin:10px 0 0}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .end{text-align:center;padding:48px 8px;animation:qin .35s ease}
 .end .ok{width:64px;height:64px;margin:0 auto 16px;border-radius:50%;background:var(--btn);display:flex;align-items:center;justify-content:center;color:#fff;font-size:30px;font-weight:700}
@@ -121,6 +120,76 @@ a,button,select,input,textarea,label{-webkit-tap-highlight-color:transparent;tou
 @media (max-width:720px){.lb-x{top:8px;right:8px;background:rgba(5,8,20,.65)}section{padding:44px 0}.qf{padding:26px 18px 22px}}
 .priv{color:var(--mut);font-size:13px;margin-top:14px}
 @media (prefers-reduced-motion:reduce){.q.on,.end{animation:none}.bar i{transition:none}html{scroll-behavior:auto}}
+
+/* ===== Diseño v3: banda azul noche, Bodoni Moda + Hanken Grotesk, animaciones suaves ===== */
+:root{--hero:linear-gradient(160deg,#e7edfd 0%,#efe9fc 100%);--hero-tx:#1d2342;--hero-mut:#5c6382;--hero-ac:#7b68d9;--tint:#f2effc}
+h1,h2,.qt,.edu b,.brand b{font-optical-sizing:auto}
+section{padding:72px 0}
+h2{font-size:clamp(30px,4.8vw,42px);line-height:1.12;font-weight:400;letter-spacing:-.01em;margin-bottom:12px}
+
+/* Encabezado */
+header{background:var(--hero);color:var(--hero-tx);padding-bottom:84px;overflow:hidden}
+header:before{content:"";position:absolute;inset:-60px 0 0;z-index:-1;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' fill='none' stroke='%237b68d9' stroke-opacity='.22'%3E%3Ccircle cx='200' cy='200' r='60'/%3E%3Ccircle cx='200' cy='200' r='100'/%3E%3Ccircle cx='200' cy='200' r='140'/%3E%3Ccircle cx='200' cy='200' r='180'/%3E%3Ccircle cx='200' cy='200' r='199'/%3E%3C/svg%3E") right -140px top -120px/440px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' fill='none' stroke='%234a63d8' stroke-opacity='.16'%3E%3Ccircle cx='200' cy='200' r='80'/%3E%3Ccircle cx='200' cy='200' r='125'/%3E%3Ccircle cx='200' cy='200' r='170'/%3E%3Ccircle cx='200' cy='200' r='199'/%3E%3C/svg%3E") left -170px bottom -150px/460px no-repeat;transform:translate3d(0,calc(var(--sy,0) * .22px),0)}
+@media (max-width:600px){header:before{background-size:300px,320px;background-position:right -120px top -90px,left -150px bottom -120px}}
+header .brand{padding:36px 0 0}
+header .brand b{font-family:var(--caps);font-weight:500;font-size:19px;letter-spacing:.3em;padding-left:.3em}
+header .brand span{color:var(--hero-mut);letter-spacing:.42em;padding-left:.42em;font-size:10.5px;margin-top:4px}
+header .brand:after{content:"";display:block;width:36px;height:1px;background:var(--hero-ac);opacity:.7;margin-top:22px}
+header h1{font-size:clamp(36px,6.6vw,64px);line-height:1.06;letter-spacing:-.015em;max-width:760px;margin-bottom:22px}
+header .sub{color:var(--hero-mut);font-size:17px;max-width:620px;margin-bottom:34px}
+header .cta{background:var(--btn);color:#fff;font-weight:600;padding:14px 30px;letter-spacing:.01em;box-shadow:0 10px 24px -14px rgba(74,99,216,.7)}
+@media (hover:hover){header .cta:hover{background:var(--vi)}}
+
+/* Botones */
+.btn,.back{transition:background-color .2s ease,transform .2s ease,border-color .2s ease}
+@media (hover:hover){.btn:hover{transform:translateY(-1px)}.back:hover{border-color:var(--ac)}}
+.btn:active{transform:translateY(0)}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+
+/* Cómo trabajo */
+.steps{max-width:820px;border-top:0}
+.steps li{grid-template-columns:52px 1fr;padding:22px 0;border-bottom:1px solid var(--bd)}
+.steps .n{font-style:italic;font-size:38px;line-height:.9;color:var(--vi)}
+.steps b{font-size:17px}
+@media (min-width:760px){
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:34px}
+  .steps li{display:block;border-bottom:0;border-top:1px solid var(--bd);padding:22px 0 0}
+  .steps .n{display:block;margin-bottom:14px;font-size:46px}
+}
+
+/* Formulario sobre banda de color */
+#formulario{background:var(--tint)}
+.qf{border-color:transparent;box-shadow:0 1px 2px rgba(60,50,140,.06),0 18px 40px -24px rgba(60,50,140,.35);padding:34px 28px 28px}
+.qt{font-size:clamp(22px,3.8vw,28px);line-height:1.25;letter-spacing:-.005em}
+.opt{transition:border-color .15s,background .15s,transform .15s}
+@media (hover:hover){.opt:hover{transform:translateX(2px)}}
+.opt .k{background:var(--sel);border-color:transparent}
+.bar i{background:linear-gradient(90deg,var(--btn),var(--vi))}
+
+/* Sobre mí */
+.edu b{font-size:18px;line-height:1.35}
+.foto{box-shadow:14px 14px 0 var(--tint)}
+@media (min-width:760px){
+  .about{flex-direction:row;align-items:flex-start;text-align:left;gap:56px}
+  .about .foto{flex:0 0 330px;max-width:330px}
+  .about p{margin-left:0!important}
+  .about .edu{margin:0}
+  .about .certs{justify-content:flex-start}
+}
+
+/* Pie */
+.tp-wrap{padding:8px 20px 56px}
+footer{background:var(--hero);color:var(--hero-mut);padding:34px 20px}
+footer{border-top:1px solid var(--bd)}
+footer:before{content:"VICTORIA MOLINA";display:block;font-family:var(--caps);letter-spacing:.3em;font-size:13px;color:var(--hero-tx);margin-bottom:8px}
+
+/* Animaciones suaves */
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+header .brand,header h1,header .sub,header .cta{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+header h1{animation-delay:.12s}header .sub{animation-delay:.24s}header .cta{animation-delay:.36s}
+.rv .sr{opacity:0;transform:translate3d(0,22px,0);transition:opacity .8s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv .sr.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){header .brand,header h1,header .sub,header .cta{animation:none}.rv .sr{opacity:1;transform:none;transition:none}header:before{transform:none}.btn:hover,.opt:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -298,7 +367,7 @@ function show(i) {
   q.el.querySelector('.qt').textContent = q.t.replace('{nombre}', nombre || 'Perfecto');
   q.el.classList.add('on');
   err.textContent = '';
-  back.style.visibility = hist.length ? 'visible' : 'hidden';
+  back.style.display = hist.length ? '' : 'none';
   const last = nextIndex(i) < 0;
   next.textContent = last ? 'Enviar' : 'Siguiente';
   $('cons').hidden = !last;
@@ -416,6 +485,25 @@ const lb = $('lb');
 document.querySelectorAll('.cert').forEach(b => b.onclick = () => { $('lbimg').src = b.dataset.src; lb.showModal(); });
 $('lbx').onclick = () => lb.close();
 lb.onclick = e => { if (e.target === lb) lb.close(); };
+
+// Aparición suave de los pasos y la foto al llegar a ellos
+if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.documentElement.classList.add('rv');
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold: .15, rootMargin: '0px 0px -40px 0px'});
+  document.querySelectorAll('section h2, section .sub, .steps li, .qf, .priv, .about .foto, .about > div > *, .tp').forEach(x => {
+    x.classList.add('sr');
+    const i = [...x.parentNode.children].filter(c => c.classList.contains('sr')).indexOf(x);
+    x.style.transitionDelay = Math.min(i, 4) * 90 + 'ms';
+    io.observe(x);
+  });
+  // El dibujo del encabezado se desplaza apenas al bajar (solo mientras se ve)
+  const hd = document.querySelector('header');
+  let tick = false;
+  addEventListener('scroll', () => {
+    if (tick) return; tick = true;
+    requestAnimationFrame(() => { tick = false; const y = scrollY; if (y < hd.offsetHeight) hd.style.setProperty('--sy', y); });
+  }, {passive: true});
+}
 </script>
 </body>
 </html>
