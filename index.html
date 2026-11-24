@@ -139,6 +139,9 @@ header h1{font-size:clamp(36px,6.6vw,64px);line-height:1.06;letter-spacing:-.015
 header .sub{color:var(--hero-mut);font-size:17px;max-width:620px;margin-bottom:34px}
 header .cta{background:var(--btn);color:#fff;font-weight:600;padding:14px 30px;letter-spacing:.01em;box-shadow:0 10px 24px -14px rgba(74,99,216,.7)}
 @media (hover:hover){header .cta:hover{background:var(--vi)}}
+header .hv{display:block;width:100%;max-width:720px;aspect-ratio:16/9;margin:0 auto 34px;background:#1d2342;border-radius:6px;box-shadow:0 1px 2px rgba(60,50,140,.08),0 24px 48px -28px rgba(60,50,140,.45);animation:rise .9s cubic-bezier(.2,.7,.2,1) .3s both}
+footer small{display:block;margin-top:6px;font-size:12px;opacity:.8}
+@media (prefers-reduced-motion:reduce){header .hv{animation:none}}
 
 /* Botones */
 .btn,.back{transition:background-color .2s ease,transform .2s ease,border-color .2s ease}
@@ -199,10 +202,10 @@ header h1{animation-delay:.12s}header .sub{animation-delay:.24s}header .cta{anim
   <div style="height:36px"></div>
   <h1>Abogada de familia en Posadas y online en todo el país</h1>
   <p class="sub">Soy Victoria. Te acompaño en divorcios, cuota alimentaria, cuidado de los hijos y sucesiones, y también puedo orientarte en otros temas legales. Atiendo de forma presencial en Posadas, Misiones, y online en toda Argentina.</p>
+  <video class="hv" controls playsinline preload="none" poster="img/video-portada.jpg" aria-label="Video de presentación de Victoria Molina">
+    <source src="img/video-victoria.mp4" type="video/mp4">
+  </video>
   <a class="btn cta" href="#formulario">Contame tu caso</a>
-
-  <!-- VIDEO PRINCIPAL: cuando esté, poner acá <div class="vid">iframe de YouTube (Compartir → Insertar)</div> y volver a sumar "Mirá el video" al texto -->
-  <!-- (oculto hasta tener el video) <div class="vid">…iframe de YouTube…</div> -->
 </div></header>
 
 <section><div class="w c">
@@ -272,7 +275,7 @@ header h1{animation-delay:.12s}header .sub{animation-delay:.24s}header .cta{anim
   </a>
 </div>
 
-<footer>© 2026 Victoria Molina, abogada de familia</footer>
+<footer>© 2026 Victoria Molina, abogada de familia<small>Sitio web desarrollado por Dante Serafini</small></footer>
 
 <script>
 // URL del Google Apps Script de Victoria (se completa en el paso de la planilla)
